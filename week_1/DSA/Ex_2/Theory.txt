@@ -1,0 +1,25 @@
+1.Big O notation describes how an algorithm’s running time grows as the input size n increases.
+
+2.->  Linear search: O(n)
+      Checks items one by one.
+
+      Binary search:O(log n)
+      Halves the search space in every iteration
+      Requires sorted array
+
+3.Best case: target is found immediately.
+  Average case: target is somewhere in the middle.
+  Worst case: target is last or not present.
+
+
+4. Linear search
+   Works on sorted and unsorted arrays.
+   Easy to implement.
+   useful when the number of products is small.
+   Time complexity: O(n).
+
+   Binary search
+   Much faster for large product collections.
+   Requires products to be sorted by productId.
+   Time complexity: O(log n).
+   Sorting initially takes O(n log n) time
