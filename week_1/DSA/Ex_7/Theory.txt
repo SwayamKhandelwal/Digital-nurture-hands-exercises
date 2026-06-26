@@ -1,0 +1,5 @@
+Bubble Sort->Bubble Sort repeatedly compares adjacent elements and swaps them if they are in the wrong order. After each pass, the largest element "bubbles" to the end of the list.
+
+Insertion Sort->Insertion Sort builds the sorted portion of the array one element at a time by inserting each new element into its correct position.
+
+Quick Sort->Quick Sort is a divide-and-conquer algorithm that selects a pivot element, places it in its correct position, and recursively sorts the left and right subarrays.
