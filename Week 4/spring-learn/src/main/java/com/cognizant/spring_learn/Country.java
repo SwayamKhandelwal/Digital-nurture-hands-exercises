@@ -1,7 +1,9 @@
 package com.cognizant.spring_learn;
 
 
+import org.springframework.stereotype.Component;
 
+@Component
 public class Country {
 
 
