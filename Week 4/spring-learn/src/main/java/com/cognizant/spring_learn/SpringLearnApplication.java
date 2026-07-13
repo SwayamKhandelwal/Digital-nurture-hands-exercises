@@ -12,7 +12,8 @@ public class SpringLearnApplication {
 
 	public static void main(String[] args) {
 
-		displayCountry();
+//		displayCountry();
+		SpringApplication.run(SpringLearnApplication.class);
 
 	}
 
