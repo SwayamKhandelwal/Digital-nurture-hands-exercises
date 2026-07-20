@@ -1,0 +1,8 @@
+1. Java Persistence API (JPA):
+JPA is a specification provided by Java for managing data between Java objects and relational databases. It defines a set of rules and interfaces for object-relational mapping (ORM), but it does not provide the actual implementation. To use JPA, you need a framework like Hibernate.
+
+2. Hibernate:
+Hibernate is an implementation of JPA and also a popular ORM framework. It provides the actual code that performs database operations such as saving, updating, deleting, and retrieving data. Hibernate also offers additional features beyond JPA, such as caching, lazy loading, and advanced query capabilities.
+
+3. Spring Data JPA:
+Spring Data JPA is a Spring framework module built on top of JPA. It makes database access much easier by reducing boilerplate code. Instead of writing SQL queries or implementing repository classes manually, developers can simply create repository interfaces, and Spring Data JPA automatically provides the implementation.

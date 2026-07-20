@@ -28,22 +28,20 @@ public class OrmLearnApplication {
 
 		testGetAllCountries();
 
-//		LOGGER.info("Inside main");
+
 		System.out.println("inside main");
 	}
 
 	private static void testGetAllCountries() {
 
-//		LOGGER.info("Start");
-
 		System.out.println("start");
 		List<Country> countries =
 				countryService.getAllCountries();
 
-//		LOGGER.debug("Countries={}", countries);
+
 		System.out.println("Countries= "+countries);
 
-//		LOGGER.info("End");
+
 		System.out.println("End");
 	}
 
