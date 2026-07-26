@@ -1,0 +1,27 @@
+1. check Git Version
+git version
+
+2. configure User Credentials
+git config --global user.name "Swayam Khandelwal"
+git config --global user.email "swayam.Khandelwal.9082.@gmail.com"
+git config --global --list
+
+3. configure Default Editor (Notepad)
+git config --global core.editor "notepad++.exe -multiInst -nosession"
+git config --global -e
+
+4. initialize Repository
+git init GitDemo
+
+5. create File and Check Status
+echo "Welcome to the version control" >> welcome.txt
+git status
+
+6. stage and Commit File
+git add welcome.txt
+git commit -m "Initial commit with welcome.txt"
+
+7. push to Remote Repository
+git remote add origin <https://github.com/SwayamKhandelwal/Digital-nurture-hands-exercises>
+git branch -M main
+git push -u origin main

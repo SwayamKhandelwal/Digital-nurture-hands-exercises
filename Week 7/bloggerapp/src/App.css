@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+.column {
+  flex: 1;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.column-border {
+  border-right: 4px solid green;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.item-spacing {
+  margin-bottom: 20px;
+}

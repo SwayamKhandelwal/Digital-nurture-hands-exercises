@@ -1,0 +1,123 @@
+1. create a .log file and a log folder in the working directory:
+touch app.log
+mkdir log
+touch log/debug.log
+
+2. create and configure the .gitignore file to ignore .log files and log folders:
+echo "*.log" >> .gitignore
+echo "log/" >> .gitignore
+
+3. verify git status (confirms app.log and log/ are ignored and only .gitignore is tracked):
+git status
+
+4. stage, commit, and push the .gitignore file:
+git add .gitignore
+git commit -m "add .gitignore to ignore log files and log directory"
+git push origin main
+
+5. branching:
+# create a new branch named GitNewBranch
+git branch GitNewBranch
+
+# list all local and remote branches
+git branch -a
+
+# switch to the newly created branch
+git checkout GitNewBranch
+
+# create a new file and add content to it
+echo "this is a feature branch file" >> feature.txt
+
+# stage and commit the changes to the branch
+git add feature.txt
+git commit -m "add feature.txt in GitNewBranch"
+
+# check status
+git status
+
+6. merging:
+# switch back to the master branch
+git checkout master
+
+# list differences between master and branch in command line
+git diff master..GitNewBranch
+
+# list visual differences using p4merge tool
+git difftool master..GitNewBranch
+
+# merge the branch into master
+git merge GitNewBranch
+
+# check commit history with graph view after merge
+git log --oneline --graph --decorate
+
+# delete the branch after merging
+git branch -d GitNewBranch
+
+# check git status to verify current state
+git status
+
+7. verify master is in clean state:
+git checkout master
+git status
+
+8. create a branch "GitWork" and add a file "hello.xml":
+git branch GitWork
+git checkout GitWork
+echo "<note><to>user</to><from>branch</from><body>hello from branch</body></note>" > hello.xml
+
+9. update the content of "hello.xml" and observe status:
+echo "<note><to>user</to><from>branch</from><body>hello from branch updated</body></note>" > hello.xml
+git status
+
+10. commit the changes to reflect in the branch:
+git add hello.xml
+git commit -m "add hello.xml in GitWork branch"
+
+11. switch to master:
+git checkout master
+
+12. add a file "hello.xml" to master with different content:
+echo "<note><to>user</to><from>master</from><body>hello from master</body></note>" > hello.xml
+
+13. commit the changes to master:
+git add hello.xml
+git commit -m "add hello.xml in master branch"
+
+14. observe the log:
+git log --oneline --graph --decorate --all
+
+15. check differences with git diff tool:
+git diff master..GitWork
+
+16. list differences using p4merge tool:
+git difftool master..GitWork
+
+17. merge the branch into master (this will trigger a conflict):
+git merge GitWork
+
+18. observe the git markup in the file:
+cat hello.xml
+
+19. use 3-way merge tool to resolve the conflict:
+git mergetool
+
+20. commit the changes after resolving conflict:
+git commit -m "resolved merge conflict in hello.xml"
+
+21. observe git status and add backup file (.orig) to .gitignore:
+git status
+echo "*.orig" >> .gitignore
+
+22. commit the changes to .gitignore:
+git add .gitignore
+git commit -m "add backup files to .gitignore"
+
+23. list out all available branches:
+git branch -a
+
+24. delete the branch merged to master:
+git branch -d GitWork
+
+25. observe the final log:
+git log --oneline --graph --decorate

@@ -1,0 +1,41 @@
+1. branching:
+# create a new branch named GitNewBranch
+git branch GitNewBranch
+
+# list all local and remote branches
+git branch -a
+
+# switch to the newly created branch
+git checkout GitNewBranch
+
+# create a new file and add content to it
+echo "this is a feature branch file" >> feature.txt
+
+# stage and commit the changes to the branch
+git add feature.txt
+git commit -m "add feature.txt in GitNewBranch"
+
+# check status
+git status
+
+2. merging:
+# switch back to the master branch
+git checkout master
+
+# list differences between master and branch in command line
+git diff master..GitNewBranch
+
+# list visual differences using p4merge tool
+git difftool master..GitNewBranch
+
+# merge the branch into master
+git merge GitNewBranch
+
+# check commit history with graph view after merge
+git log --oneline --graph --decorate
+
+# delete the branch after merging
+git branch -d GitNewBranch
+
+# check git status to verify current state
+git status

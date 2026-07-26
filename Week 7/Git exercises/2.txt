@@ -1,0 +1,16 @@
+1. create a .log file and a log folder in the working director
+touch app.log
+mkdir log
+touch log/debug.log
+
+2. create and configure the .gitignore file to ignore .log files and log folders
+echo "*.log" >> .gitignore
+echo "log/" >> .gitignore
+
+3. verify git status 
+git status
+
+4. stage, commit, and push the .gitignore file:
+git add .gitignore
+git commit -m "add .gitignore to ignore log files and log directory"
+git push origin main

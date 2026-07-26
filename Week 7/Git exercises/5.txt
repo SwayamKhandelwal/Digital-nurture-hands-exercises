@@ -1,0 +1,15 @@
+1. verify if master is in clean state:
+git checkout master
+git status
+
+2. list out all available branches:
+git branch -a
+
+3. pull the latest changes from remote repository to master:
+git pull origin master
+
+4. push pending local changes to remote repository:
+git push origin master
+
+5. check git log to verify pushed commits:
+git log --oneline
